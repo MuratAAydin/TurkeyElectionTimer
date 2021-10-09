@@ -2,7 +2,7 @@
     font-family: 'Roboto', sans-serif;
     text-align: center;
     color: white;
-
+    overflow: hidden;
 }
 
 .fs-4rem {
@@ -15,4 +15,10 @@
 
 .bg-color {
     background: rgb(21, 21, 21);
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1520px !important;
+    }
 }

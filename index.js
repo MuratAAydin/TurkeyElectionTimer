@@ -1,8 +1,13 @@
-const countDownDate = new Date("June 18, 2020 07:00:00 GMT+03:00");
+const countDownDate = new Date("June 18, 2023 07:00:00 GMT+03:00");
 const mainElement = document.getElementById("main")
 
-const count = setInterval(function () {
+const links = [
+    'https://www.youtube.com/embed/zZMrkJQRq-4?autoplay=1',
+    'https://www.youtube.com/embed/iqqdFglJ_zA?autoplay=1'
+]
+const pickRandomLink = Math.floor(Math.random() * links.length);
 
+const count = setInterval(function () {
     const now = new Date();
     const distance = countDownDate - now;
 
@@ -10,7 +15,6 @@ const count = setInterval(function () {
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
 
     mainElement.innerHTML = `
         <div>
@@ -20,21 +24,23 @@ const count = setInterval(function () {
            <h1 class="pt-3">Sonra seçim var!</h1>
         </div>
     `;
-
     if (distance <= 0) {
-        clearInterval(count);
         mainElement.innerHTML = `
-        
-            <div class="ratio ratio-16x9">
-                <iframe class="border-0" type="text/html"
-                src="https://www.youtube.com/embed/zZMrkJQRq-4?autoplay=1">
-                </iframe>
+            <div class="p-5">
+                <h1 class="p-3">Bugün seçim günü!</h1>
+                <h2>LÜTFEN OY VER.</h2>
             </div>
-            <div class="p-sm-5">
-                <h1>LÜTFEN OY VER</h1>
+            <div>
+                <div class="ratio ratio-16x9">
+                    <iframe class="border-0" type="text/html" 
+                    src="${links[pickRandomLink]}">
+                    </iframe>
+                </div>
             </div>
-        
+           
         `;
-
+        clearInterval(count);
     }
 }, 1000);
+console.error('%cBir hata ile karşılaşırsan bana bildirir misin? :=)', 'font-size: 1.25rem; color: white')
+console.error('%chttps://twitter.com/MuratAydi02n', 'font-size: 1.25rem; color: white')
