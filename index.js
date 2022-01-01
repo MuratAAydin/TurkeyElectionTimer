@@ -18,7 +18,7 @@ const count = setInterval(function () {
 
     mainElement.innerHTML = `
         <div>
-            <h1 id="count" class="fs-4rem">
+            <h1 id="count" class="fs-4rem fw-bolder main-text">
                 ${days} Gün ${hours} Saat ${minutes} Dakika ${seconds} Saniye
            </h1>
            <h1 class="pt-3">Sonra seçim var!</h1>
@@ -26,21 +26,21 @@ const count = setInterval(function () {
     `;
     if (distance <= 0) {
         mainElement.innerHTML = `
+        <div>
             <div class="p-5">
-                <h1 class="p-3">Bugün seçim günü!</h1>
-                <h2>LÜTFEN OY VER.</h2>
+                <h1 class="p-3 fw-bold main-text display-1">Bugün seçim günü!</h1>
+                <h2 class="display-5">LÜTFEN OY VER.</h2>
             </div>
-            <div>
+            <div class="position-relative player">
                 <div class="ratio ratio-16x9">
-                    <iframe class="border-0" type="text/html" 
-                    src="${links[pickRandomLink]}">
-                    </iframe>
+                        <iframe class="border-0" type="text/html"
+                            src="${links[pickRandomLink]}">
+                        </iframe>
                 </div>
             </div>
-           
-        `;
+        </div>`;
         clearInterval(count);
     }
 }, 1000);
 console.error('%cBir hata ile karşılaşırsan bana bildirir misin? :=)', 'font-size: 1.25rem; color: white')
-console.error('%chttps://twitter.com/MuratAydi02n', 'font-size: 1.25rem; color: white')
+console.error('%chttps://github.com/MuratAAydin', 'font-size: 1.25rem; color: white')
