@@ -6,12 +6,16 @@
     transition-duration: 750ms;
 }
 
-.fs-4rem {
-    font-size: 4rem;
+.fs-5rem {
+    font-size: 5rem;
 }
 
 .player {
-    width: 750px !important;
+    width: 861px !important;
+}
+
+.main-text {
+    font-family: 'Open Sans', sans-serif;
 }
 
 .main-height {
@@ -30,7 +34,7 @@
 
 @media (max-width: 992px) {
     .player {
-        width: 650px !important;
+        width: 696px !important;
     }
 }
 
