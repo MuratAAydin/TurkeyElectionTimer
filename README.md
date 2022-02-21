@@ -1,5 +1,5 @@
 # TurkeyElectionTimer
 
-#### _How many days left the election_
+📅 How many days until the elections in Turkey?
 
-#### _Seçimlere kaç gün kaldı?_
+📅 Cumhurbaşkanlığı seçimine ne kadar kaldı?
